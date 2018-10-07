@@ -9,6 +9,7 @@
   "author": "Sumesh Majhi",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.26.0",
     "gulp": "^3.9.1"
   }
 }
