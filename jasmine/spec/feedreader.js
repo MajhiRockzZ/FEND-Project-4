@@ -14,7 +14,7 @@ $(
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
     */
-    describe("RSS Feeds", () => {
+    describe('RSS Feeds', () => {
       /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
          * empty. Experiment with this before you get started on
@@ -22,7 +22,7 @@ $(
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-      it("are defined", () => {
+      it('are defined', () => {
         expect(allFeeds).toBeDefined();
         expect(allFeeds.length).not.toBe(0);
       });
@@ -31,7 +31,7 @@ $(
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-      it("has URL defined and URL is not empty", () => {
+      it('has URL defined and URL is not empty', () => {
         allFeeds.forEach(feed => {
           expect(feed.url).toBeDefined();
           expect(feed.url.length).not.toBe(0);
@@ -42,7 +42,7 @@ $(
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-      it("has name defined and name is not empty", () => {
+      it('has name defined and name is not empty', () => {
         allFeeds.forEach(feed => {
           expect(feed.name).toBeDefined();
           expect(feed.name.length).not.toBe(0);
@@ -51,14 +51,14 @@ $(
     });
 
     /* TODO: Write a new test suite named "The menu" */
-    describe("The menu", () => {
+    describe('The menu', () => {
       /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-      it("has menu element hidden", () => {
-        expect(document.body.classList.contains("menu-hidden")).toBe(true);
+      it('has menu element hidden', () => {
+        expect(document.body.classList.contains('menu-hidden')).toBe(true);
       });
 
       /* TODO: Write a test that ensures the menu changes
