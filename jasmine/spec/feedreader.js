@@ -86,8 +86,10 @@ $(
         loadFeed(0, done);
       });
 
-      it('are present', (done) => {
-        let numEntries = document.querySelector('.feed').getElementsByClassName('entry').length;
+      it('are present', done => {
+        let numEntries = document
+          .querySelector('.feed')
+          .getElementsByClassName('entry').length;
         expect(numEntries).toBeGreaterThan(0);
         done();
       });
