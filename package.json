@@ -4,7 +4,7 @@
   "description": "Test suite for a web-based application that reads RSS feeds.",
   "main": "app.js",
   "scripts": {
-    "deploy": "gh-pages -d ./"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Sumesh Majhi",
   "license": "MIT",
@@ -12,11 +12,18 @@
   "devDependencies": {
     "browser-sync": "^2.26.0",
     "eslint-plugin-jasmine": "^2.10.1",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-prettier": "^2.0.0"
+    "gulp-prettier": "^2.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-if": "^2.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "gulp-cssnano": "^2.1.3"
   }
 }
