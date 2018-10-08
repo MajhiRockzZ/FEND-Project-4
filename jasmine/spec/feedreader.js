@@ -83,7 +83,9 @@ $(
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
       beforeEach(done => {
-        loadFeed(0, done);
+        loadFeed(0, function() {
+          done();
+        });
       });
 
       it('are present', done => {
