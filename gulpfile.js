@@ -6,12 +6,13 @@ const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
 const del = require('del');
 const runSequence = require('run-sequence');
+const gutil = require('gulp-util');
 
 gulp.task('default', callback => {
-  runSequence(['useref', 'fonts', 'watch'], callback);
+  runSequence(['useref', 'fonts'], callback);
 });
 
-gulp.task('watch', ['browserySync'], () => {
+gulp.task('watch', ['browserSync'], () => {
   gulp.watch('app/css/**/*.css', browserSync.reload);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -21,7 +22,7 @@ gulp.task('watch', ['browserySync'], () => {
 gulp.task('browserSync', () => {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: ''
     }
   });
 });
@@ -32,6 +33,7 @@ gulp.task('useref', () => {
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest('dist'));
 });
 
