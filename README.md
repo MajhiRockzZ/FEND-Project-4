@@ -15,22 +15,13 @@ In this project we have been assigned to complete a incomplete test suite of a w
   - Load index.html in your favorite browser.
 
 - Method 2 :
-  
-  - `git clone` repository or download the .zip file.
-  - extract the .zip file and `cd` into the project dir.
-  - run `npm install`.
-  - And then `gulp`.
-
-- Method 3 :
 
   - Follow the this [link](https://majhirockzz.github.io/FEND-Project-4/ "Feed Reader Testing").
 
 ## Features 💎
 
-- Live reloads using [BrowserSync](https://www.browsersync.io/ "https://www.browsersync.io/").
 - Linting JavaScript [ESLint](https://eslint.org/ "https://eslint.org/").
 - Testing JavaScript code [Jasmine](https://jasmine.github.io/ "https://jasmine.github.io/").
-- Automate workflow using [Gulp](https://gulpjs.com/ "https://gulpjs.com/").
 
 ## Authors 💎
 
