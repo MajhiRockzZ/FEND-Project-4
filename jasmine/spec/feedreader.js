@@ -96,10 +96,26 @@ $(
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
-
-    /* TODO: Write a test that ensures when a new feed is loaded
+    describe('New Feed Selection', () => {
+      /* TODO: Write a test that ensures when a new feed is loaded
      * by the loadFeed function that the content actually changes.
      * Remember, loadFeed() is asynchronous.
      */
+      var oldFeed;
+      beforeEach(done => {
+        loadFeed(0, () => {
+          oldFeed = document.querySelector('.feed').innerHTML;
+          loadFeed(1, () => {
+            done();
+          });
+        });
+      });
+
+      it('is differnet from old', done => {
+        var newFeed = document.querySelector('.feed').innerHTML;
+        expect(oldFeed).not.toBe(newFeed);
+        done();
+      });
+    });
   })()
 );
