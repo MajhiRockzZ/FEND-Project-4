@@ -13,6 +13,7 @@
     "browser-sync": "^2.26.0",
     "eslint-plugin-jasmine": "^2.10.1",
     "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-prettier": "^2.0.0"
   },
   "dependencies": {
